@@ -1,0 +1,26 @@
+
+generateLikelihoodV2()               2019-01-05 13:07:07
+
+
+NULL
+i = 6
+
+
+NULL
+ Family: poisson 
+  Links: mu = log 
+Formula: totalSpiders ~ 1 + log_pop + contact_high + contact_high:log_pop 
+   Data: cl.st.list[[i]] (Number of observations: 12) 
+Samples: 4 chains, each with iter = 3000; warmup = 2000; thin = 1;
+         total post-warmup samples = 4000
+
+Population-Level Effects: 
+                     Estimate Est.Error l-89% CI u-89% CI Eff.Sample Rhat
+Intercept               -0.93      2.67    -5.17     3.38       3330 1.00
+log_pop                  0.25      0.97    -1.30     1.80       3365 1.00
+contact_high             0.08      0.94    -1.45     1.59       2048 1.00
+log_pop:contact_high    -0.05      0.40    -0.68     0.60       1963 1.00
+
+Samples were drawn using sampling(NUTS). For each parameter, Eff.Sample 
+is a crude measure of effective sample size, and Rhat is the potential 
+scale reduction factor on split chains (at convergence, Rhat = 1).

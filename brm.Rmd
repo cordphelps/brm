@@ -35,15 +35,15 @@ clusterData.df <- read.csv(source.url, header=TRUE, row.names=NULL)
 #   for nighttime observations (collected in the 'am')
 #
 
-    gg.likelihood <- generateLikelihoodV2(df=clusterData.df, list=rl, daytime='24h')
+    gg.likelihood <- generateLikelihoodV2(df=clusterData.df, daytime='24h')
     print(gg.likelihood)
   
     filtered.df <- clusterData.df %>% dplyr::filter(time == 'pm')
-    gg.likelihood <- generateLikelihoodV2(df=filtered.df, list=rl, daytime='pm')
+    gg.likelihood <- generateLikelihoodV2(df=filtered.df, daytime='pm')
     print(gg.likelihood) 
   
     filtered.df <- clusterData.df %>% dplyr::filter(time == 'am')
-    gg.likelihood <- generateLikelihoodV2(df=filtered.df, list=rl, daytime='am')
+    gg.likelihood <- generateLikelihoodV2(df=filtered.df, daytime='am')
     print(gg.likelihood) 
   
 ```
